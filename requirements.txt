@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+mss
+opencv-python
+psutil
+pyautogui
+pillow
+numpy
+python-multipart

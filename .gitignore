@@ -1,0 +1,27 @@
+# Datos privados creados por cada instalación
+pc_remote_auth.json
+pc_remote_instance.json
+pc_remote.log
+.env
+.env.*
+
+# Entornos, cachés y artefactos de compilación
+venv/
+venv.zip
+build/
+dist/
+*.spec
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Pruebas y archivos locales
+remote_files/prueba.txt
+lll.py
+*.log
+.DS_Store
+Thumbs.db
+
+# Herramientas locales
+.vscode/
+.idea/
