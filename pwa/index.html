@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101827">
+  <link rel="manifest" href="/pwa/manifest.webmanifest">
+  <link rel="stylesheet" href="/pwa/styles.css">
+  <title>PC Remote</title>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">PC REMOTE</p>
+        <h1>Mis computadores</h1>
+      </div>
+      <button id="addButton" class="primary" type="button">＋ Conectar PC</button>
+    </header>
+
+    <section id="notice" class="notice" hidden></section>
+    <section id="connections" class="connections"></section>
+
+    <section id="connectPanel" class="panel" hidden>
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">NUEVA CONEXIÓN</p>
+          <h2>Conectar un PC</h2>
+        </div>
+        <button id="closeButton" class="icon-button" type="button" aria-label="Cerrar">×</button>
+      </div>
+      <p class="muted">La dirección se guarda solo en este dispositivo. Usa la IP de Tailscale o la dirección local del PC.</p>
+      <form id="connectForm">
+        <label>Nombre visible<input id="displayName" name="displayName" required maxlength="60" placeholder="Mi PC"></label>
+        <label>Dirección del PC<input id="endpoint" name="endpoint" required maxlength="180" placeholder="https://dirección-privada:8000" inputmode="url" autocomplete="off"></label>
+        <div class="endpoint-check"><button id="checkButton" class="secondary" type="button">Comprobar estado</button><div id="endpointStatus" class="form-status" role="status"></div></div>
+        <label>Usuario local<input id="username" name="username" value="admin" required maxlength="60" autocomplete="username"></label>
+        <label>Contraseña de PC Remote<input id="password" name="password" type="password" required autocomplete="current-password"></label>
+        <div id="formStatus" class="form-status" role="status"></div>
+        <button class="primary full" type="submit">Probar y guardar conexión</button>
+      </form>
+    </section>
+
+    <footer class="footer">Las conexiones se guardan localmente. No hay una cuenta central.</footer>
+  </main>
+  <script src="/pwa/app.js" defer></script>
+</body>
+</html>

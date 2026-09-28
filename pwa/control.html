@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101827">
+  <link rel="stylesheet" href="/pwa/styles.css">
+  <link rel="stylesheet" href="/pwa/control.css">
+  <title>Control · PC Remote</title>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div><p class="eyebrow">PC REMOTE</p><h1 id="title">Control</h1></div>
+      <button id="back" class="secondary" type="button">Mis PCs</button>
+    </header>
+    <section id="notice" class="notice" hidden></section>
+    <section class="panel control-panel">
+      <div class="panel-heading"><div><p class="eyebrow">VISTA</p><h2>Pantalla del PC</h2></div><span id="connectionState" class="status">● Conectando</span></div>
+      <div class="screen-wrap"><img id="screen" alt="Pantalla del computador" hidden><div id="screenEmpty" class="empty">Esperando imagen…</div></div>
+      <div class="control-row"><button id="refresh" class="secondary" type="button">Actualizar</button><button id="logout" class="danger" type="button">Cerrar sesión</button></div>
+    </section>
+    <section class="panel">
+      <div class="panel-heading"><div><p class="eyebrow">EQUIPO</p><h2>Estado</h2></div></div>
+      <div id="systemInfo" class="info-grid"><span>Cargando…</span></div>
+    </section>
+    <section class="panel">
+      <div class="panel-heading"><div><p class="eyebrow">ACCIONES</p><h2>Control rápido</h2></div></div>
+      <label>Escribir en el PC<textarea id="text" rows="3" maxlength="500" placeholder="Texto para enviar al computador"></textarea></label>
+      <div class="control-row"><button id="sendText" class="primary" type="button">Enviar texto</button><button data-key="enter" class="secondary" type="button">Enter</button><button data-key="space" class="secondary" type="button">Espacio</button></div>
+      <div class="control-row power-row"><button data-action="lock" class="secondary" type="button">Bloquear</button><button data-action="cancel" class="secondary" type="button">Cancelar apagado</button><button data-action="shutdown" class="danger" type="button">Apagar</button></div>
+    </section>
+    <details class="panel compact-panel">
+      <summary>Procesos activos</summary>
+      <div class="control-row"><input id="processFilter" placeholder="Buscar por nombre o PID"><button id="loadProcesses" class="secondary" type="button">Actualizar</button></div>
+      <div id="processList" class="remote-list"><span class="muted">Abre esta sección para cargar los procesos.</span></div>
+    </details>
+    <details class="panel compact-panel">
+      <summary>Archivos del PC</summary>
+      <div class="control-row"><input id="filePath" placeholder="Ruta de carpeta" autocomplete="off"><button id="loadFiles" class="secondary" type="button">Abrir</button></div>
+      <div id="fileLocation" class="muted"></div>
+      <div id="fileList" class="remote-list"><span class="muted">Escribe una ruta y pulsa Abrir.</span></div>
+      <label class="upload-label">Subir archivo<input id="uploadFile" type="file"></label>
+    </details>
+    <details class="panel compact-panel">
+      <summary>Cámara</summary>
+      <p class="muted">Al iniciar la cámara, Windows mostrará el indicador correspondiente. Puedes detenerla cuando quieras.</p>
+      <div class="camera-wrap"><img id="camera" alt="Vista de la cámara" hidden><div id="cameraEmpty" class="empty">La cámara está detenida.</div></div>
+      <div class="control-row"><button id="startCamera" class="primary" type="button">Iniciar cámara</button><button id="stopCamera" class="danger" type="button" disabled>Detener cámara</button></div>
+    </details>
+  </main>
+  <script src="/pwa/control.js" defer></script>
+</body>
+</html>
