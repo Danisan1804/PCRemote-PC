@@ -1,0 +1,15 @@
+TÉRMINOS DE USO Y AVISO DE SEGURIDAD — PC REMOTE
+
+PC Remote permite controlar un computador de forma remota. Solo debo instalarlo y usarlo en equipos propios o cuando tenga autorización expresa de la persona responsable.
+
+La aplicación puede acceder a la pantalla, cámara, teclado, mouse, procesos, energía y archivos del computador configurado. Estas funciones son sensibles y debo usarlas de forma responsable y legal.
+
+Durante la instalación crearé una contraseña propia de PC Remote. Esa contraseña no es la contraseña de Windows y debo guardarla en un lugar seguro. Si la pierdo, tendré que restablecer la instalación siguiendo el procedimiento disponible.
+
+La conexión puede usar la red local o Tailscale. PC Remote no crea una cuenta central para registrar a los usuarios ni comparte intencionalmente la contraseña con un servidor externo.
+
+No debo usar PC Remote para vigilar, grabar, acceder a archivos o controlar dispositivos sin autorización. La cámara debe mostrar claramente cuándo está activa y cualquier persona que use la aplicación debe respetar las leyes aplicables.
+
+El instalador configura un servicio de inicio automático y puede crear una tarea de Windows. Puedo desinstalarlo con las herramientas incluidas en la carpeta instalada.
+
+Este texto es un aviso informativo y no sustituye una revisión legal profesional. Al continuar, confirmo que entiendo el alcance de los permisos y que usaré PC Remote únicamente con autorización.
